@@ -1,0 +1,2 @@
+[run]
+omit = weppy_mvc_demo/cli.py
