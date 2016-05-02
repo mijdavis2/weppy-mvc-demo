@@ -1,4 +1,26 @@
 - extend "layout.haml"
 
-%h1  #{ T("Welcome to Weppy Mvc Demo") }
-%p  #{ T("Let's build something cool.") }
+%h1 #{ T("Welcome to Weppy Mvc Demo") }
+%p
+  #{ T("An MVC take on ") }
+    %a{href: "http://weppy.org/"}
+      Weppy:
+    #{ T("a full-stack python web framework designed with simplicity in mind.") }
+  %br
+  %br
+  #{ T("Created with") }
+    %a{href: "https://github.com/mijdavis2/generator-weppy-mvc"}
+      generator-weppy-mvc.
+  %hr
+
+%h2
+  #{ ("Features") }
+%ul
+  %li Simple routing system
+  %li Beautiful ORM with integrated migrations
+  %li Elegant validation system
+  %li Secure authentication system
+  %li Handy forms generation
+  %li Straight multi-language system
+  %li Powerful and friendly templating system
+  %li Haml templating (extension)

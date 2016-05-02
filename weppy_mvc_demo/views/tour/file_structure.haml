@@ -1,0 +1,49 @@
+.row
+  .col-sm-6
+    %h3
+      #{ T("The File Structure") }
+    %p
+      #{ T("Weppy MVC has your standard mvc file structure with contollers, models, static files, views, and core utilities and running scripts.") }
+  .well.ascii.col-sm-6
+    %ul.ascii
+      %li
+        weppy_mvc_demo/
+        %ul
+          %li
+            weppy_mvc_demo/
+            %ul
+              %li
+                controllers/
+                %ul
+                  %li admin/
+                  %li api/
+                  %li user/
+                  %li __init__.py
+                  %li controller_utils.py
+                  %li main.py
+              %li
+                models/
+                %ul
+                  %li __init__.py
+                  %li user.py
+              %li
+                static/
+                %ul
+                  %li css/
+                  %li fonts/
+                  %li js/
+              %li
+                views/
+                %ul
+                  %li layout.haml
+                  %li welcome.haml
+              %li __init__.py
+              %li cli.py
+              %li dev_utils.py
+              %li utils.py
+          %li tests/
+          %li Dockerfile
+          %li README.md
+          %li requirements.txt
+          %li run.py
+          %li setup.sh
