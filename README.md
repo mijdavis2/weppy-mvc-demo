@@ -1,6 +1,7 @@
 # Weppy Mvc Demo 
 [![Build Status](https://travis-ci.org/mijdavis2/weppy-mvc-demo.svg?branch=master)](https://travis-ci.org/mijdavis2/weppy_mvc_demo)
 [![Coverage Status](https://coveralls.io/repos/github/mijdavis2/weppy-mvc-demo/badge.svg?branch=master)](https://coveralls.io/github/mijdavis2/weppy_mvc_demo?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/da6e4e83204b46eb88f83758ef27cd12)](https://www.codacy.com/app/mijdavis2/weppy-mvc-demo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mijdavis2/weppy-mvc-demo&amp;utm_campaign=Badge_Grade)
 
 Weppy Mvc Demo is a full stack python application built with generator-weppy-mvc.
 Generator-weppy-mvc is based on the starter-weppy project.
