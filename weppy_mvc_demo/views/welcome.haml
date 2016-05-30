@@ -1,26 +1,47 @@
 - extend "layout.haml"
 
 %h1 #{ T("Welcome to Weppy Mvc Demo") }
-%p
-  #{ T("An MVC take on ") }
+%h4.secondary
+  #{ T("An MVC scaffolding built on ") }
     %a{href: "http://weppy.org/"}
       Weppy:
-    #{ T("a full-stack python web framework designed with simplicity in mind.") }
+  #{ T("a full-stack python web framework designed with simplicity in mind.") }
   %br
   %br
-  #{ T("Created with") }
+  #{ T("Created using ") }
     %a{href: "https://github.com/mijdavis2/generator-weppy-mvc"}
       generator-weppy-mvc.
-  %hr
+.row
+  .col-md-6
+    %h2
+      #{ ("Weppy Features") }
+    %ul
+      %li Simple routing system
+      %li Beautiful ORM with integrated migrations
+      %li Elegant validation system
+      %li Secure authentication system
+      %li Handy forms generation
+      %li Straight multi-language system
+      %li Powerful and friendly templating system
+      %li Haml templating (extension)
 
-%h2
-  #{ ("Features") }
-%ul
-  %li Simple routing system
-  %li Beautiful ORM with integrated migrations
-  %li Elegant validation system
-  %li Secure authentication system
-  %li Handy forms generation
-  %li Straight multi-language system
-  %li Powerful and friendly templating system
-  %li Haml templating (extension)
+  .col-md-6
+    %h2
+      Weppy MVC Features
+    %ul
+      %li
+        Python3 MVC framework
+      %li
+        Easy addon modules - api included
+      %li
+        Pythonic Haml
+      %li
+        pyDAL
+      %li
+        Bootstrap
+
+%hr
+
+%h2 #{ T("Want to build your own?") }
+
+- include 'generator_weppy_description.haml'

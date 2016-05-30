@@ -14,3 +14,9 @@ def account(f, k):
     response.meta.title = "Weppy Mvc Demo | Account"
     form = auth(f, k)
     return dict(req=f, form=form)
+
+
+@app.route('/tour')
+def tour():
+    response.meta.title = "Weppy Mvc Demo - Tour"
+    return dict()

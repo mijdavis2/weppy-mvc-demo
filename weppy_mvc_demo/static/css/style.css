@@ -36,6 +36,15 @@
   background-color: #585858;
   opacity: 1;
 }
+
+blockquote {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.secondary {
+  color: rgba(0, 0, 0, 0.54);
+}
+
 @media only screen and (min-width: 768px) {
   .cd-top {
     right: 20px;

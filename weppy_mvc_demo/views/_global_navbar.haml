@@ -13,6 +13,9 @@
           %a{href: "{{=url('main.welcome')}}"}
             = T("Home")
         %li
+          %a{href: "{{=url('main.tour')}}"}
+            = T("Tour")
+        %li
           %a{href: "{{=url('admin.users')}}"}
             = T("Users")
         - if not current_user
