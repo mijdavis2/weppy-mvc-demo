@@ -6,15 +6,17 @@
     %a{href: "http://weppy.org/"}
       Weppy:
   #{ T("a full-stack python web framework designed with simplicity in mind.") }
-  %br
-  %br
-  #{ T("Created using ") }
+.secondary
+  #{ T("Note: This is a work in progress. More examples and tutorials are in development") }
+%h2
+  #{ T("This application stack was created using ") }
     %a{href: "https://github.com/mijdavis2/generator-weppy-mvc"}
       generator-weppy-mvc.
+%hr
 .row
   .col-md-6
-    %h2
-      #{ ("Weppy Features") }
+    %h3
+      Weppy Features
     %ul
       %li Simple routing system
       %li Beautiful ORM with integrated migrations
@@ -24,9 +26,8 @@
       %li Straight multi-language system
       %li Powerful and friendly templating system
       %li Haml templating (extension)
-
   .col-md-6
-    %h2
+    %h3
       Weppy MVC Features
     %ul
       %li
@@ -39,9 +40,7 @@
         100% Test Coverage
       %li
         Bootstrap
-
 %hr
-
 %h2 #{ T("Want to build your own?") }
 
 - include 'generator_weppy_description.haml'
