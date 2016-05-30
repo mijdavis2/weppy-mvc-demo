@@ -10,14 +10,3 @@ script:
   - py.test -v --cov-report term-missing --cov=weppy_mvc_demo -r w tests
 after_success:
   - coveralls
-deploy:
-  provider: elasticbeanstalk
-    access_key_id: $ACCESS_KEY_ID
-    secret_access_key: $SECRET_ACCESS_KEY
-    region: "us-east-1"
-    app: "weppy-mvc-demo"
-    env: "weppy-mvc-demo-prd"
-    bucket_name: <S3 bucket name that is used by elastic beanstalk>
-    on:
-      repo: mijdavis2/weppy-mvc-demo
-      branch: master
