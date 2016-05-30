@@ -5,8 +5,20 @@ python:
 install:
   - "pip install -r requirements.txt"
   - "pip install coveralls"
+  - "gem install dpl"
 script:
   - py.test -v --cov-report term-missing --cov=weppy_mvc_demp -r w tests
 after_success:
   - coveralls
   - coverage xml
+deploy:
+  provider: elasticbeanstalk
+    access_key_id: $access-key-id
+    secret_access_key: $secret-access-key
+    region: "us-east-1"
+    app: "weppy-mvc-demo"
+    env: "weppy-mvc-demo-prd"
+    bucket_name: <S3 bucket name that is used by elastic beanstalk>
+    on:
+      repo: weppy-mvc-demo
+      branch: master
