@@ -2,3 +2,76 @@
 
 %h1 #{ T("403 You aren't allowed in here!") }
 %p #{ T("Sorry... this page is restricted.") }
+%hr
+%h2
+  Redirecting to Error Pages due to Unauthorized Access
+.row
+  .col-md-9
+    %p
+      To restrict access to an entire module, use
+      %code
+        user.common_handlers = [RequireHandler(auth.is_logged_in, not_auth)]
+      %pre
+        \# controllers/user/user.py
+
+        from weppy import response, AppModule
+        from weppy.handlers import RequireHandler
+
+        from weppy_mvc_demo import app, db, auth
+        from ..controller_utils import not_auth
+
+        user = AppModule(app, 'user', __name__, template_folder="user")
+        user.common_handlers = [RequireHandler(auth.is_logged_in, not_auth)]
+
+
+        @user.route("/user/<str:userid>")
+        def profile(userid):
+            user_row = db.User(id=userid)
+            response.meta.title = "Weppy Mvc Demo | " + user_row.first_name + " " + \
+                user_row.last_name + " profile"
+            return dict(user=user_row)
+      %pre
+        \# controllers/controller_utils.py
+
+        from weppy import response, abort, url, redirect
+        from weppy_mvc_demo import app, auth
+
+
+        def not_auth():
+          abort(403)
+
+
+        @app.on_error(403)
+        def error_403():
+          response.meta.title = "Weppy Mvc Demo-403"
+          return app.render_template("errors/403.haml")
+  .col-md-3
+    %p.secondary
+      Condensed project tree:
+    .well.ascii
+      %ul.ascii
+        %li
+          weppy_mvc_demo/
+          %ul
+            %li
+              controllers/
+              %ul
+                %li
+                  user/
+                  %ul
+                    %li.t-red user.py
+                %li.t-red controller_utils.py
+                %li main.py
+            %li
+              models/
+              %ul
+                %li user.py
+            %li
+              views/
+              %ul
+                %li
+                  errors
+                  %ul
+                    %li.t-red 403.haml
+                %li layout.haml
+            %li __init__.py

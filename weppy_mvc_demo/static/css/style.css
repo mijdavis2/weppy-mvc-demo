@@ -63,6 +63,15 @@ blockquote {
 .btn {
   border-radius: 0;
 }
+
+pre {
+  font-family: monospace; font-size: 1em; line-height: 1.5; -webkit-text-size-adjust: none;
+}
+
+.t-red {
+  color: red;
+}
+
 div.ascii { font-family: monospace; font-size: 1em; line-height: 1.5; -webkit-text-size-adjust: none; }
 
 ul.ascii, ul.ascii ul {  margin-left: 0; padding-left: 0;  list-style: none; }
@@ -143,3 +152,7 @@ ul.ascii > li > ul > li:last-child > ul > li:last-child > ul > li:last-child > u
 ul.ascii > li > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li > ul > li:last-child::before { content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0│\00a0\00a0\00a0└──\00a0"; }
 ul.ascii > li > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li::before { content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0├──\00a0"}
 ul.ascii > li > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child::before { content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0└──\00a0"; }
+
+body {
+  padding-bottom: 100px;
+}
