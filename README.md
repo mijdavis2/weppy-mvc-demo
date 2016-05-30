@@ -1,16 +1,13 @@
 # Weppy Mvc Demo 
-[![Build Status](https://travis-ci.org/mijdavis2/weppy_mvc_demo.svg?branch=master)](https://travis-ci.org/mijdavis2/weppy_mvc_demo)
-[![Coverage Status](https://coveralls.io/repos/github/mijdavis2/weppy_mvc_demo/badge.svg?branch=master)](https://coveralls.io/github/mijdavis2/weppy_mvc_demo?branch=master)
+[![Build Status](https://travis-ci.org/mijdavis2/weppy-mvc-demo.svg?branch=master)](https://travis-ci.org/mijdavis2/weppy_mvc_demo)
+[![Coverage Status](https://coveralls.io/repos/github/mijdavis2/weppy-mvc-demo/badge.svg?branch=master)](https://coveralls.io/github/mijdavis2/weppy_mvc_demo?branch=master)
 
-Starter Weppy is a python web application starter kit built on the [weppy framework](https://github.com/gi0baro/weppy). 
-Current version is based on Weppy 0.6 with an MVC scaffolding. 
-An api module, dev mode, and 100% test coverage are included out of the box.
+Weppy Mvc Demo is a full stack python application built with generator-weppy-mvc.
+Generator-weppy-mvc is based on the starter-weppy project.
 
-**TODO**:
-- Complete [generator-weppy-mvc](https://github.com/mijdavis2/generator-weppy-mvc):
- generator-weppy-mvc will be a [yeoman](http://yeoman.io/) generator for this project. Current status:
- [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-
+>Starter Weppy is a python web application starter kit built on the [weppy framework](https://github.com/gi0baro/weppy). 
+>Current version is based on Weppy 0.6 with an MVC scaffolding. 
+>An api module, dev mode, and 100% test coverage are included out of the box.
 
 ## Run
 
