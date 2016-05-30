@@ -9,6 +9,11 @@ def welcome():
     return dict()
 
 
+@app.route("/health-check")
+def health_check():
+    return "Status OK"
+
+
 @app.route('/account(/<str:f>)?(/<str:k>)?')
 def account(f, k):
     response.meta.title = "Weppy Mvc Demo | Account"

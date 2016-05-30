@@ -19,5 +19,5 @@ deploy:
     env: "weppy-mvc-demo-prd"
     bucket_name: <S3 bucket name that is used by elastic beanstalk>
     on:
-      repo: weppy-mvc-demo
+      repo: mijdavis2/weppy-mvc-demo
       branch: master
