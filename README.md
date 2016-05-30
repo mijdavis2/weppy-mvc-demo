@@ -11,6 +11,16 @@ Generator-weppy-mvc is based on the starter-weppy project.
 >Current version is based on Weppy 0.6 with an MVC scaffolding. 
 >An api module, dev mode, and 100% test coverage are included out of the box.
 
+## Todo
+
+Demos and Tutorials
+
+- auth models/forms
+- advanced models
+- user input and forms
+- multi-language support
+- etc
+
 ## Run
 
 **Requirements**:
