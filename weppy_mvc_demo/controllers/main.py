@@ -23,5 +23,5 @@ def account(f, k):
 
 @app.route('/tour')
 def tour():
-    response.meta.title = "Weppy Mvc Demo - Tour"
+    response.meta.title = "Weppy Mvc Demo | Tour"
     return dict()

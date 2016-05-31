@@ -45,3 +45,14 @@ def test_profile_page(logged_client):
 def test_maintenance_page(client):
     resp = client.get("/maintenance_check")
     assert "Weppy Mvc Demo | Maintenance" in resp.data
+
+
+def test_tour_page(client):
+    resp = client.get("/tour")
+    assert "Weppy Mvc Demo | Tour" in resp.data
+
+
+def test_health_check_page(client):
+    # TODO: Move to api endpoint
+    resp = client.get("/health-check")
+    assert "Status OK" in resp.data
