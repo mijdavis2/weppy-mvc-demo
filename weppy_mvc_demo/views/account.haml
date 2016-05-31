@@ -1,14 +1,35 @@
 - extend "layout.haml"
 
 - if not current_user and req != 'register'
-  %h1 Signin
-  = form
-  %br
-    %p
-      New User?
-      %a{href: "{{=url('main.account', 'register')}}"}
-        Register Here
+  .row
+    .col-md-4
+      %h1 Signin
+      = form
+      %br
+        %p
+          New User?
+          %a{href: "{{=url('main.account', 'register')}}"}
+            Register Here
+    .col-md-8
+      %h1 The Account Form
+      %p.secondary
+        %b
+          Note:
+        As this is merely a demo, user database will be refreshed on every new release.
+      %h3 Register a new user or use the following logins to gain access to certain parts of the application.
+      %p.secondary
+        Password lock has not yet been set for these users.
+        Password lock will be implemented as soon as possible to ensure passwords for demo users are accurate.
+      %pre
+        \# Mock Users for dev mode
+
+        TEST_ADMIN = UserMock('test_admin@example.com',
+                              'testadmin')
+
+        TEST_USER = UserMock('test_user@example.com',
+                             'testuser')
 - else
-  %h1 Profile
+  %h1
+    {{ =req.capitalize() }}
   = form
   %br
