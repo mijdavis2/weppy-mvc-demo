@@ -4,8 +4,10 @@
 
 # Weppy Mvc Demo 
 
-Weppy Mvc Demo is a full stack python application built with generator-weppy-mvc.
-Generator-weppy-mvc is based on the starter-weppy project.
+Weppy Mvc Demo is a full stack python application built with [generator-weppy-mvc](https://github.com/mijdavis2/generator-weppy-mvc).
+Generator-weppy-mvc is based on the [starter-weppy](https://github.com/mijdavis2/starter_weppy) project.
+
+**Live demo: https://starter-weppy.com**
 
 >Starter Weppy is a python web application starter kit built on the [weppy framework](https://github.com/gi0baro/weppy). 
 >Current version is based on Weppy 0.6 with an MVC scaffolding. 
