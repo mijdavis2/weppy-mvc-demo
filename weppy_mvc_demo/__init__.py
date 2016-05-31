@@ -45,3 +45,8 @@ from weppy_mvc_demo.controllers import *
 
 # Commands
 from weppy_mvc_demo import cli
+
+# Setup demo users
+from .dev_utils import setup_admin, setup_user
+setup_admin()
+setup_user()
