@@ -1,9 +1,9 @@
 from weppy_mvc_demo import db, auth
 from weppy_mvc_demo.models.user import User
+from tests.user_mock import TEST_ADMIN, TEST_USER
 
 
 def setup_admin():
-    from tests.fixtures import TEST_ADMIN
     db._adapter.reconnect()
     admins = auth.id_group("admin") if auth.id_group("admin") else auth.add_group("admin")
     print("Admin group id: '{}'".format(admins))
@@ -23,7 +23,6 @@ def setup_admin():
 
 
 def remove_admin():
-    from tests.fixtures import TEST_ADMIN
     db._adapter.reconnect()
     print("\nRemoving test admin.")
     dev_admin = db(User.email == TEST_ADMIN.email).select()
@@ -34,7 +33,6 @@ def remove_admin():
 
 
 def setup_user():
-    from tests.fixtures import TEST_USER
     db._adapter.reconnect()
     user = db.User.validate_and_insert(
             email=TEST_USER.email,
@@ -47,7 +45,6 @@ def setup_user():
 
 
 def remove_user():
-    from tests.fixtures import TEST_USER
     db._adapter.reconnect()
     print("\nRemoving test user.")
     dev_user = db(User.email == TEST_USER.email).select()
