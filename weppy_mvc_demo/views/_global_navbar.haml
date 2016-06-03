@@ -1,35 +1,60 @@
-%nav.navbar.navbar-inverse.navbar-static-top
-  .container
-    .navbar-header
-      %button.navbar-toggle{type: "button", data-toggle: "collapse", data-target: ".navbar-collapse"}
-        %span.sr-only Toggle Navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{href: "{{=url('main.welcome')}}"} Weppy Mvc Demo
-    .collapse.navbar-collapse
-      %ul.nav.navbar-nav
-        %li
-          %a{href: "{{=url('main.welcome')}}"}
-            = T("Home")
-        %li
-          %a{href: "{{=url('main.tour')}}"}
-            = T("Tour")
-        %li
-          %a{href: "{{=url('admin.users')}}"}
-            = T("Users")
-        - if not current_user
-          %li
-            %a{href: "{{=url('main.account', 'login')}}"}
-              = T("Login")
-        - else
-          %li
-            %a{href: "{{=url('user.profile', current_user.id)}}"}
-              = T("Profile")
-          %li
-            %a{href: "{{=url('main.account', 'logout')}}"}
-              = T("Logout")
-      %ul.nav.navbar-nav{style: "float: right;"}
-        %li
-          %a{href: "https://mdavisinsc.com"}
-            mdavisinsc
+-#%nav.navbar.navbar-inverse.navbar-static-top
+-#  .container
+-#    .navbar-header
+-#      %button.navbar-toggle{type: "button", data-toggle: "collapse", data-target: ".navbar-collapse"}
+-#        %span.sr-only Toggle Navigation
+-#        %span.icon-bar
+-#        %span.icon-bar
+-#        %span.icon-bar
+-#      %a.navbar-brand{href: "{{=url('main.welcome')}}"} Weppy Mvc Demo
+-#    .collapse.navbar-collapse
+-#      %ul.nav.navbar-nav
+-#        %li
+-#          %a{href: "{{=url('main.welcome')}}"}
+-#            = T("Home")
+-#        %li
+-#          %a{href: "{{=url('main.tour')}}"}
+-#            = T("Tour")
+-#        %li
+-#          %a{href: "{{=url('admin.users')}}"}
+-#            = T("Users")
+-#        - if not current_user
+-#          %li
+-#            %a{href: "{{=url('main.account', 'login')}}"}
+-#              = T("Login")
+-#        - else
+-#          %li
+-#            %a{href: "{{=url('user.profile', current_user.id)}}"}
+-#              = T("Profile")
+-#          %li
+-#            %a{href: "{{=url('main.account', 'logout')}}"}
+-#              = T("Logout")
+-#      %ul.nav.navbar-nav{style: "float: right;"}
+-#        %li
+-#          %a{href: "https://mdavisinsc.com"}
+-#            mdavisinsc
+
+%header.mdl-layout__header.mdl-layout__header--waterfall
+  .mdl-layout__header-row
+    %span.mdl-layout-title Weppy Mvc Demo
+    .mdl-layout-spacer
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label.mdl-textfield--align-right
+      %label.mdl-button.mdl-js-button.mdl-button--icon{:for => "waterfall-exp"}
+        %i.material-icons search
+      .mdl-textfield__expandable-holder
+        %input#waterfall-exp.mdl-textfield__input{:name => "sample", :type => "text"}
+  -#.mdl-layout__header-row
+  -#  .mdl-layout-spacer
+  -#  %nav.mdl-navigation
+  -#    %a.mdl-navigation__link{href: "{{=url('main.welcome')}}"} Home
+  -#    %a.mdl-navigation__link{:href => ""} Link
+  -#    %a.mdl-navigation__link{:href => ""} Link
+  -#    %a.mdl-navigation__link{:href => ""} Link
+
+.mdl-layout__drawer
+  %span.mdl-layout-title Title
+  %nav.mdl-navigation
+    %a.mdl-navigation__link{href: "{{=url('main.welcome')}}"} Home
+    %a.mdl-navigation__link{:href => ""} Link
+    %a.mdl-navigation__link{:href => ""} Link
+    %a.mdl-navigation__link{:href => ""} Link

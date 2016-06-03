@@ -1,46 +1,107 @@
 - extend "layout.haml"
 
-%h1 #{ T("Welcome to Weppy Mvc Demo") }
-%h4.secondary
-  #{ T("An MVC scaffolding built on ") }
-    %a{href: "http://weppy.org/"}
-      Weppy:
-  #{ T("a full-stack python web framework designed with simplicity in mind.") }
-.secondary
-  #{ T("Note: This is a work in progress. More examples and tutorials are in development") }
-%h2
-  #{ T("This application stack was created using ") }
-    %a{href: "https://github.com/mijdavis2/generator-weppy-mvc"}
-      generator-weppy-mvc.
-%hr
-.row
-  .col-md-6
-    %h3
-      Weppy Features
-    %ul
-      %li #{ T("Simple routing system") }
-      %li #{ T("Beautiful ORM with integrated migrations") }
-      %li #{ T("Elegant validation system") }
-      %li #{ T("Secure authentication system") }
-      %li #{ T("Handy forms generation") }
-      %li #{ T("Straight multi-language system") }
-      %li #{ T("Powerful and friendly templating system") }
-      %li #{ T("Haml templating (extension)") }
-  .col-md-6
-    %h3
-      Weppy MVC Features
-    %ul
-      %li #{ T("Pythonic MVC framework") }
-      %li #{ T("API included") }
-      %li #{ T("Pythonic Haml") }
-      %li #{ T("100% Test Coverage") }
-      %li #{ T("Virtual environment setup") }
-      %li #{ T("Bootstrap") }
-    %h4
-      #{ T("Upcoming") }
-    %ul
-      %li #{ T("Material Design and Icon support (optional)") }
-%hr
-%h2 #{ T("Want to build your own?") }
+%section.section--center.mdl-grid
+  .mdl-card.mdl-cell.mdl-cell--12-col.mdl-shadow--2dp
+    .mdl-card__supporting-text
+      %h1 #{ T("Weppy Mvc Demo") }
 
-- include 'generator_weppy_description.haml'
+      %h4.secondary
+        #{ T("A full-stack python application built with ") }
+          %a{href: "http://weppy.org/"}
+            Weppy
+        #{ T(" -- a python web framework designed with simplicity in mind.") }
+
+%section.section--center.mdl-grid
+    .mdl-card.mdl-cell.mdl-cell--6-col.mdl-shadow--2dp
+      .mdl-card__supporting-text
+        %h2
+          Weppy Features
+        %ul.mdl-list
+          %li.mdl-list__item
+            %span.mdl-list__item-primary-content
+              .material-icons.mdl-list__item-icon send
+              #{ T("Simple routing system") }
+          %li.mdl-list__item
+            %span.mdl-list__item-primary-content
+              .material-icons.mdl-list__item-icon data_usage
+              #{ T("Beautiful ORM with integrated migrations") }
+          %li.mdl-list__item
+            %span.mdl-list__item-primary-content
+              .material-icons.mdl-list__item-icon done
+              #{ T("Elegant validation system") }
+          %li.mdl-list__item
+            %span.mdl-list__item-primary-content
+              .material-icons.mdl-list__item-icon lock
+              #{ T("Secure authentication system") }
+          %li.mdl-list__item
+            %span.mdl-list__item-primary-content
+              .material-icons.mdl-list__item-icon web
+              #{ T("Handy forms generation") }
+          %li.mdl-list__item
+            %span.mdl-list__item-primary-content
+              .material-icons.mdl-list__item-icon format_shapes
+              #{ T("Straight multi-language system") }
+          %li.mdl-list__item
+            %span.mdl-list__item-primary-content
+              .material-icons.mdl-list__item-icon power
+              #{ T("Powerful and friendly templating system") }
+    .mdl-card.mdl-cell.mdl-cell--6-col.mdl-shadow--2dp
+      .mdl-card__supporting-text
+        %h2
+          Example:
+        %hr
+        - include 'tour/code_example.haml'
+
+%section.section--center.mdl-grid
+  .mdl-card.mdl-cell.mdl-cell--6-col.mdl-shadow--2dp
+    .mdl-card__supporting-text
+      %h2 #{ T("Want to build your own?") }
+      - include 'generator_weppy_description.haml'
+  .mdl-card.mdl-cell.mdl-cell--6-col.mdl-shadow--2dp
+    .mdl-card__supporting-text
+      %h3
+        %b Weppy Mvc
+        Features
+      %ul.mdl-list
+        %li.mdl-list__item
+          %span.mdl-list__item-primary-content
+            .material-icons.mdl-list__item-icon mood
+            Easy virtual environment setup
+        %li.mdl-list__item
+          %span.mdl-list__item-primary-content
+            .material-icons.mdl-list__item-icon developer_board
+            Pythonic MVC scaffolding
+        %li.mdl-list__item
+          %span.mdl-list__item-primary-content
+            .material-icons.mdl-list__item-icon cloud_done
+            API module and examples included
+        %li.mdl-list__item
+          %span.mdl-list__item-primary-content
+            .material-icons.mdl-list__item-icon done_all
+            100% Test Coverage
+        %li.mdl-list__item
+          %span.mdl-list__item-primary-content
+            .material-icons.mdl-list__item-icon build
+            Dev mode & development tools
+        %li.mdl-list__item
+          %span.mdl-list__item-primary-content
+            .material-icons.mdl-list__item-icon dashboard
+            Material Design
+        %li.mdl-list__item
+          %span.mdl-list__item-primary-content
+            .material-icons.mdl-list__item-icon format_size
+            #{ T("Haml templating (extension)") }
+%section.section--center.mdl-grid
+  .mdl-card.mdl-cell.mdl-cell--12-col.mdl-shadow--2dp
+    .mdl-card__supporting-text
+      %h4
+        #{ T("Upcoming") }
+      %ul.mdl-list
+        %li.mdl-list__item
+          %span.mdl-list__item-primary-content
+            .material-icons.mdl-list__item-icon cloud_upload
+            Deployment tools
+        %li.mdl-list__item
+          %span.mdl-list__item-primary-content
+            .material-icons.mdl-list__item-icon view_compact
+            Progressive app shell structure

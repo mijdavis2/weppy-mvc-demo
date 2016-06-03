@@ -2,16 +2,22 @@
 %html
   %head
     - include '_global_head.haml'
-  %body
+  %body.mdl-color--grey-100.mdl-base
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     - include '_global_bindings.haml'
-    - include '_global_navbar.haml'
 
-    .container
-      - include
 
-    - include '_global_footer.haml'
+    .demo-layout-waterfall.mdl-layout.mdl-js-layout
+      - include '_global_navbar.haml'
 
-    - include_static 'bs3/js/bootstrap.min.js'
+      %main.mdl-layout__content
+        .page-content
+          .container
+            - include
+
+            - include '_global_footer.haml'
+
+    - include_static 'js/material.min.js'
     - include_static 'js/scripts.js'
 
     %script
