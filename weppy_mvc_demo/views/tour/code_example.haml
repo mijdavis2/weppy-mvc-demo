@@ -1,0 +1,14 @@
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> weppy <span class="pl-k">import</span> request, response
+<span class="pl-k">from</span> weppy.tools <span class="pl-k">import</span> service, requires
+<span class="pl-k">from</span> myapp <span class="pl-k">import</span> app, auth
+
+<span class="pl-en">@app.route</span>()
+<span class="pl-en">@service.json</span>
+<span class="pl-en">@requires</span>(auth.is_logged_in, <span class="pl-v">otherwise</span><span class="pl-k">=</span>not_authorized)
+<span class="pl-k">def</span> <span class="pl-en">todos</span>():
+  page <span class="pl-k">=</span> request.params.page <span class="pl-k">or</span> <span class="pl-c1">1</span>
+  <span class="pl-k">return</span> {<span class="pl-s"><span class="pl-pds">'</span>todos<span class="pl-pds">'</span></span>: auth.user.todos.select(<span class="pl-v">paginate</span><span class="pl-k">=</span>page)}
+
+<span class="pl-k">def</span> <span class="pl-en">not_authorized</span>():
+  response.status <span class="pl-k">=</span> <span class="pl-c1">401</span>
+  <span class="pl-k">return</span> {<span class="pl-s"><span class="pl-pds">'</span>error<span class="pl-pds">'</span></span>: <span class="pl-s"><span class="pl-pds">'</span>not authorized<span class="pl-pds">'</span></span>}</pre></div>

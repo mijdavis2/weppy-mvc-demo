@@ -1,9 +1,18 @@
 %a{href: "#0", class: "cd-top"}
   Top
 
-%footer.footer.navbar.navbar-inverse.navbar-fixed-bottom
-  .container{style: "padding-top:15px;"}
-    %p.text-muted
-      &copy; Weppy Mvc Demo 2016 -
-      %a{href: "https://github.com/mijdavis2/weppy-mvc-demo"}
-        View the Code
+-#%footer.footer.navbar.navbar-inverse.navbar-fixed-bottom
+-#  .container{style: "padding-top:15px;"}
+-#    %p.text-muted
+-#      &copy; Weppy Mvc Demo 2016 -
+-#      %a{href: "https://github.com/mijdavis2/weppy-mvc-demo"}
+-#        View the Code
+
+%footer.mdl-mini-footer
+  .mdl-mini-footer__left-section
+    .mdl-logo Title
+    %ul.mdl-mini-footer__link-list
+      %li
+        %a{:href => "#"} Help
+      %li
+        %a{:href => "#"} Privacy & Terms
