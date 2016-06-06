@@ -1,0 +1,198 @@
+%head
+  - include '_global_head.haml'
+%body
+  .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+    .android-header.mdl-layout__header.mdl-layout__header--waterfall
+      .mdl-layout__header-row
+        %span.mdl-layout-title Weppy Mvc
+        / Add spacer, to align navigation to the right in desktop
+        .android-header-spacer.mdl-layout-spacer
+        .android-search-box.mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label.mdl-textfield--align-right.mdl-textfield--full-width
+          %label.mdl-button.mdl-js-button.mdl-button--icon{:for => "search-field"}
+            %i.material-icons search
+          .mdl-textfield__expandable-holder
+            %input#search-field.mdl-textfield__input{:type => "text"}
+        / Navigation
+        .android-navigation-container
+          %nav.android-navigation.mdl-navigation
+            %a.mdl-navigation__link.mdl-typography--text-uppercase{:href => ""} Phones
+            %a.mdl-navigation__link.mdl-typography--text-uppercase{:href => ""} Tablets
+            %a.mdl-navigation__link.mdl-typography--text-uppercase{:href => ""} Wear
+            %a.mdl-navigation__link.mdl-typography--text-uppercase{:href => ""} TV
+            %a.mdl-navigation__link.mdl-typography--text-uppercase{:href => ""} Auto
+            %a.mdl-navigation__link.mdl-typography--text-uppercase{:href => ""} One
+            %a.mdl-navigation__link.mdl-typography--text-uppercase{:href => ""} Play
+        %span.android-mobile-title.mdl-layout-title
+          %img.android-logo-image{:src => "images/android-logo.png"}
+        %button#more-button.android-more-button.mdl-button.mdl-js-button.mdl-button--icon.mdl-js-ripple-effect
+          %i.material-icons more_vert
+        %ul.mdl-menu.mdl-js-menu.mdl-menu--bottom-right.mdl-js-ripple-effect{:for => "more-button"}
+          %li.mdl-menu__item 5.0 Lollipop
+          %li.mdl-menu__item 4.4 KitKat
+          %li.mdl-menu__item{:disabled => ""} 4.3 Jelly Bean
+          %li.mdl-menu__item Android History
+    .android-drawer.mdl-layout__drawer
+      %span.mdl-layout-title
+        %img.android-logo-image{:src => "images/android-logo-white.png"}
+      %nav.mdl-navigation
+        %a.mdl-navigation__link{:href => ""} Phones
+        %a.mdl-navigation__link{:href => ""} Tablets
+        %a.mdl-navigation__link{:href => ""} Wear
+        %a.mdl-navigation__link{:href => ""} TV
+        %a.mdl-navigation__link{:href => ""} Auto
+        %a.mdl-navigation__link{:href => ""} One
+        %a.mdl-navigation__link{:href => ""} Play
+        .android-drawer-separator
+        %span.mdl-navigation__link{:href => ""} Versions
+        %a.mdl-navigation__link{:href => ""} Lollipop 5.0
+        %a.mdl-navigation__link{:href => ""} KitKat 4.4
+        %a.mdl-navigation__link{:href => ""} Jelly Bean 4.3
+        %a.mdl-navigation__link{:href => ""} Android history
+        .android-drawer-separator
+        %span.mdl-navigation__link{:href => ""} Resources
+        %a.mdl-navigation__link{:href => ""} Official blog
+        %a.mdl-navigation__link{:href => ""} Android on Google+
+        %a.mdl-navigation__link{:href => ""} Android on Twitter
+        .android-drawer-separator
+        %span.mdl-navigation__link{:href => ""} For developers
+        %a.mdl-navigation__link{:href => ""} App developer resources
+        %a.mdl-navigation__link{:href => ""} Android Open Source Project
+        %a.mdl-navigation__link{:href => ""} Android SDK
+    .android-content.mdl-layout__content
+      %a{:name => "top"}
+      .android-be-together-section.mdl-typography--text-center
+        .logo-font.android-slogan be together. not the same.
+        .logo-font.android-sub-slogan welcome to android... be yourself. do your thing. see what's going on.
+        .logo-font.android-create-character
+          %a{:href => ""}
+            %img{:src => "images/andy.png"} create your android character
+        %a{:href => "#screens"}
+          %button.android-fab.mdl-button.mdl-button--colored.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect
+            %i.material-icons expand_more
+      .android-screen-section.mdl-typography--text-center
+        %a{:name => "screens"}
+        .mdl-typography--display-1-color-contrast Powering screens of all sizes
+        .android-screens
+          .android-wear.android-screen
+            %a.android-image-link{:href => ""}
+              %img.android-screen-image{:src => "images/wear-silver-on.png"}
+                %img.android-screen-image{:src => "images/wear-black-on.png"}
+            %a.android-link.mdl-typography--font-regular.mdl-typography--text-uppercase{:href => ""} Android Wear
+          .android-phone.android-screen
+            %a.android-image-link{:href => ""}
+              %img.android-screen-image{:src => "images/nexus6-on.jpg"}
+            %a.android-link.mdl-typography--font-regular.mdl-typography--text-uppercase{:href => ""} Phones
+          .android-tablet.android-screen
+            %a.android-image-link{:href => ""}
+              %img.android-screen-image{:src => "images/nexus9-on.jpg"}
+            %a.android-link.mdl-typography--font-regular.mdl-typography--text-uppercase{:href => ""} Tablets
+          .android-tv.android-screen
+            %a.android-image-link{:href => ""}
+              %img.android-screen-image{:src => "images/tv-on.jpg"}
+            %a.android-link.mdl-typography--font-regular.mdl-typography--text-uppercase{:href => ""} Android TV
+          .android-auto.android-screen
+            %a.android-image-link{:href => ""}
+              %img.android-screen-image{:src => "images/auto-on.jpg"}
+            %a.android-link.mdl-typography--font-regular.mdl-typography--text-uppercase.mdl-typography--text-left{:href => ""} Coming Soon: Android Auto
+      .android-wear-section
+        .android-wear-band
+          .android-wear-band-text
+            .mdl-typography--display-2.mdl-typography--font-thin The best of Google built in
+            %p.mdl-typography--headline.mdl-typography--font-thin
+              Android works perfectly with your favourite apps like Google Maps,
+              Calendar and YouTube.
+            %p
+              %a.mdl-typography--font-regular.mdl-typography--text-uppercase.android-alt-link{:href => ""}
+                See what's new in the Play Store&nbsp;
+                %i.material-icons chevron_right
+      .android-customized-section
+        .android-customized-section-text
+          .mdl-typography--font-light.mdl-typography--display-1-color-contrast Customised by you, for you
+          %p.mdl-typography--font-light
+            Put the stuff that you care about right on your home screen: the latest news, the weather or a stream of your recent photos.
+            %br
+              %a.android-link.mdl-typography--font-light{:href => ""} Customise your phone
+        .android-customized-section-image
+      .android-more-section
+        .android-section-title.mdl-typography--display-1-color-contrast More from Android
+        .android-card-container.mdl-grid
+          .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone.mdl-card.mdl-shadow--3dp
+            .mdl-card__media
+              %img{:src => "images/more-from-1.png"}
+            .mdl-card__title
+              %h4.mdl-card__title-text Get going on Android
+            .mdl-card__supporting-text
+              %span.mdl-typography--font-light.mdl-typography--subhead Four tips to make your switch to Android quick and easy
+            .mdl-card__actions
+              %a.android-link.mdl-button.mdl-js-button.mdl-typography--text-uppercase{:href => ""}
+                Make the switch
+                %i.material-icons chevron_right
+          .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone.mdl-card.mdl-shadow--3dp
+            .mdl-card__media
+              %img{:src => "images/more-from-4.png"}
+            .mdl-card__title
+              %h4.mdl-card__title-text Create your own Android character
+            .mdl-card__supporting-text
+              %span.mdl-typography--font-light.mdl-typography--subhead Turn the little green Android mascot into you, your friends, anyone!
+            .mdl-card__actions
+              %a.android-link.mdl-button.mdl-js-button.mdl-typography--text-uppercase{:href => ""}
+                androidify.com
+                %i.material-icons chevron_right
+          .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone.mdl-card.mdl-shadow--3dp
+            .mdl-card__media
+              %img{:src => "images/more-from-2.png"}
+            .mdl-card__title
+              %h4.mdl-card__title-text Get a clean customisable home screen
+            .mdl-card__supporting-text
+              %span.mdl-typography--font-light.mdl-typography--subhead A clean, simple, customisable home screen that comes with the power of Google Now: Traffic alerts, weather and much more, just a swipe away.
+            .mdl-card__actions
+              %a.android-link.mdl-button.mdl-js-button.mdl-typography--text-uppercase{:href => ""}
+                Download now
+                %i.material-icons chevron_right
+          .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone.mdl-card.mdl-shadow--3dp
+            .mdl-card__media
+              %img{:src => "images/more-from-3.png"}
+            .mdl-card__title
+              %h4.mdl-card__title-text Millions to choose from
+            .mdl-card__supporting-text
+              %span.mdl-typography--font-light.mdl-typography--subhead Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.
+            .mdl-card__actions
+              %a.android-link.mdl-button.mdl-js-button.mdl-typography--text-uppercase{:href => ""}
+                Find apps
+                %i.material-icons chevron_right
+      %footer.android-footer.mdl-mega-footer
+        .mdl-mega-footer--top-section
+          .mdl-mega-footer--left-section
+            %button.mdl-mega-footer--social-btn
+            \&nbsp;
+            %button.mdl-mega-footer--social-btn
+            \&nbsp;
+            %button.mdl-mega-footer--social-btn
+          .mdl-mega-footer--right-section
+            %a.mdl-typography--font-light{:href => "#top"}
+              Back to Top
+              %i.material-icons expand_less
+        .mdl-mega-footer--middle-section
+          %p.mdl-typography--font-light Satellite imagery: © 2014 Astrium, DigitalGlobe
+          %p.mdl-typography--font-light Some features and devices may not be available in all areas
+        .mdl-mega-footer--bottom-section
+          %a#version-dropdown.android-link.android-link-menu.mdl-typography--font-light
+            Versions
+            %i.material-icons arrow_drop_up
+          %ul.mdl-menu.mdl-js-menu.mdl-menu--top-left.mdl-js-ripple-effect{:for => "version-dropdown"}
+            %li.mdl-menu__item 5.0 Lollipop
+            %li.mdl-menu__item 4.4 KitKat
+            %li.mdl-menu__item 4.3 Jelly Bean
+            %li.mdl-menu__item Android History
+          %a#developers-dropdown.android-link.android-link-menu.mdl-typography--font-light
+            For Developers
+            %i.material-icons arrow_drop_up
+          %ul.mdl-menu.mdl-js-menu.mdl-menu--top-left.mdl-js-ripple-effect{:for => "developers-dropdown"}
+            %li.mdl-menu__item App developer resources
+            %li.mdl-menu__item Android Open Source Project
+            %li.mdl-menu__item Android SDK
+            %li.mdl-menu__item Android for Work
+          %a.android-link.mdl-typography--font-light{:href => ""} Blog
+          %a.android-link.mdl-typography--font-light{:href => ""} Privacy Policy
+    %a#view-source.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-color--accent.mdl-color-text--accent-contrast{:href => "https://github.com/google/material-design-lite/blob/master/templates/android-dot-com/", :target => "_blank"} View Source
+    %script{:src => "https://code.getmdl.io/1.1.3/material.min.js"}
