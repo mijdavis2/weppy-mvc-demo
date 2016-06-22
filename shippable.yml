@@ -17,10 +17,10 @@ integrations:
     branches:
       only:
         - master
-    integrationName: shippable_eb_deploy
-      type: aws
-      target: eb_paas
-      platform: 64bit Amazon Linux 2016.03 v2.1.0 running Docker 1.9.1
-      application_name: weppy-mvc-demo
-      env_name: weppy-mvc-demo-dev
-      region: us-east-1
+    integrationName: "shippable_eb_deploy"
+    type: aws
+    target: eb_paas
+    platform: "64bit Amazon Linux 2016.03 v2.1.0 running Docker 1.9.1"
+    application_name: weppy-mvc-demo
+    env_name: weppy-mvc-demo-dev
+    region: us-east-1
