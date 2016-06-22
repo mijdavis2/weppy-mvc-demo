@@ -21,7 +21,12 @@ def account(f, k):
     return dict(req=f, form=form)
 
 
-@app.route('/tour')
+@app.route()
 def tour():
     response.meta.title = "Weppy Mvc Demo | Tour"
     return dict()
+
+
+@app.route()
+def my_ajaxf():
+    return "$('#target').html('<p>something</p>');"
