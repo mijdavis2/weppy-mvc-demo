@@ -3,11 +3,6 @@ language: python
 python:
   - 3.5
 
-env:
-  global:
-    - AWS_DEFAULT_REGION=us-east-1
-    - secure: hTSnbDdwEqT0eXWF21N+fyJ3RdP+RDwOXGF1WrLigF2lhdTMOjktUvTUMEDkRZ429z+8D9/uy1l9HFJLE/yqYwbgbLuQJH62L1UBC4Xz/nHu8SuzTe24O6U7dPEMstvwVhT9HXp2u3yVUeyzBJW96xXJKQsro2u5rPvkGEdDM0LIUcwT900XQ6ZqL7TkTEmC7h0CHhjL6HzUulEQWmXjQgTxbYbUoknDjVc+0BBEzD+2lPnenejI/LjKPd32YC3XRGq8YAIaNtg1W3bZcpbTXmupDt4SXPFytEMfbzRyrtBpdHFUWJRYmPI01g5kNbIITk7xL2kn411cGi3vZwNk8A==
-
 build:
   ci:
     - pip install -r requirements.txt
@@ -16,6 +11,13 @@ build:
     - mkdir -p shippable/codecoverage
     - py.test -v --cov-report=xml --cov=weppy_mvc_demo -r w tests --junitxml=shippable/testresults/testresults.xml
     - mv coverage.xml shippable/codecoverage/codecoverage.xml
-  on_success:
-    - pip install awsebcli
-    - eb deploy weppy-mvc-demo-dev
+
+integrations:
+  deploy:
+    integrationName: shippable_eb_deploy
+      type: aws
+      target: eb_paas
+      platform: 64bit Amazon Linux 2016.03 v2.1.0 running Docker 1.9.1
+      application_name: weppy-mvc-demo
+      env_name: weppy-mvc-demo-dev
+      region: us-east-1
