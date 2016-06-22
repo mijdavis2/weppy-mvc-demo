@@ -1,7 +1,7 @@
 [![Build Status](https://api.shippable.com/projects/575e00702a8192902e2367b0/badge?branch=master)](https://app.shippable.com/projects/575e00702a8192902e2367b0)
 [![Coverage Status](https://api.shippable.com/projects/575e00702a8192902e2367b0/coverageBadge?branch=master)](https://app.shippable.com/projects/575e00702a8192902e2367b0)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/da6e4e83204b46eb88f83758ef27cd12)](https://www.codacy.com/app/mijdavis2/weppy-mvc-demo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mijdavis2/weppy-mvc-demo&amp;utm_campaign=Badge_Grade)
-[![Weppy Version](https://img.shields.io/badge/weppy-0.7.1-blue.svg)](http://weppy.org)
+[![Weppy Version](https://img.shields.io/badge/weppy-0.7.2-blue.svg)](http://weppy.org)
 
 # Weppy Mvc Demo 
 
